@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+
+<body>
+    <main>
+        <section class="loginsection">
+            <div class="left">
+                <img src="../images/profile_2.jpg" alt="Registration Image" height="100%" width="100%"
+                    class="registerpic">
+            </div>
+            <div class="right">
+                <h1>Create an account</h1>
+                <h5>Already have an account? &nbsp; <a href="login.html" style="color: blue">Login</a>
+                </h5>
+                <form id="register-form">
+                    <div class="input-center">
+                        <div class="name">
+                            <input class="firstname" id="firstname" name="firstname" placeholder="Enter your firstname"
+                                type="text" required>
+                            <input class="lastname" id="lastname" name="lastname" type="text"
+                                placeholder="Enter your lastname" required>
+                        </div><br>
+                        <input id="email" name="email" placeholder="Enter email" type="email" required><br>
+                        <input id="password" name="password" type="password" placeholder="Enter password" required><br>
+                    </div>
+                    <div class="sex">
+                        <label>Gender: </label>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender" id="female" value="female">
+                        <label for="female">Female</label>
+                        <input id="others" name="gender" type="radio" value="others">
+                        <label for="others">Others</label>
+                    </div>
+                    <label style="margin-right: 100px;">
+                        <input type="checkbox">
+                        I agree to the Terms & Conditions
+                    </label>
+
+                    <button onclick="window.location.href='login.html'" class="createaccount">
+                        Create account
+                    </button>
+
+
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="registration.js"></script>
+</body>
+
+</html>
