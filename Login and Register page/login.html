@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <main>
+        <section class="registerSection">
+            <div class="left">
+                <img src="../images/profile.jpg" alt="Login Image" height="80%" width="80%">
+            </div>
+            <div class="right">
+                <h1>Login to your Account</h1>
+                <h5>Don't have an account? &nbsp;<a href="registration.html"
+                        style="color: blue;">Register</a></h5>
+                <form id="login-form">
+                    <input class="email" id="email" type="email" name="email" placeholder="Enter your Email"
+                        required><br>
+                    <input class="password" id="password" type="password" name="password"
+                        placeholder="Enter your password" required><br>
+                    <a href="" style="text-decoration: underline; color: blue;">Forgot password</a> <br>
+                    <button onclick="window.location.href='../website.html'" class="createaccount">
+                        Login
+                    </button>
+
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="login.js"></script>
+</body>
+
+</html>
