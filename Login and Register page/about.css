@@ -1,0 +1,368 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-color: #0056b3;
+    --primary-hover: #004494;
+    --secondary-color: #F9A826; /* A warm, vibrant yellow/gold */
+    --success-color: #28a745; /* A new accent color for positive actions */
+    --light-gray: #f4f7fa;
+    --dark-blue: #2c3e50;
+    --text-color: #555;
+    --heading-font: 'Poppins', sans-serif;
+    --body-font: 'Roboto', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: #fff;
+    margin: 0;
+    overflow-x: hidden; /* Prevents horizontal scroll from animations */
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-family: var(--heading-font);
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--dark-blue);
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--secondary-color);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+
+/* --- Scroll Animation --- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* --- Hero Section --- */
+.hero-section {
+    background: linear-gradient(135deg, rgba(0, 55, 115, 0.85), rgba(44, 62, 80, 0.85)), url('YOUR_PUNE_CITYSCAPE_IMAGE_URL_HERE'); /* Use the generated Pune image here */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax effect */
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px; /* Adjust based on your header height */
+}
+
+.hero-content h1 {
+    font-family: var(--heading-font);
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    animation: slideInUp 1s ease-out;
+}
+
+.hero-content .subtitle {
+    font-size: 1.25rem;
+    max-width: 750px;
+    margin: 0 auto;
+    font-weight: 400;
+    line-height: 1.8;
+    animation: slideInUp 1s ease-out 0.3s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* --- How MyCityFix Works Section (New 2-column layout) --- */
+.how-mycityfix-works-section {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+}
+
+.how-mycityfix-works-section .works-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.works-steps {
+    flex: 1;
+    min-width: 300px;
+}
+
+.step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.step-item .step-icon {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    flex-shrink: 0; /* Prevents icon from shrinking */
+    width: 50px; /* Fixed width for alignment */
+    text-align: center;
+}
+
+.step-item h3 {
+    font-family: var(--heading-font);
+    color: var(--dark-blue);
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.step-item p {
+    font-size: 0.95rem;
+    color: var(--text-color);
+}
+
+.works-image {
+    flex: 1;
+    min-width: 400px;
+    text-align: center;
+}
+
+.works-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.works-image img:hover {
+    transform: scale(1.02);
+}
+
+/* --- Our Values Section --- */
+.values-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.value-card {
+    background-color: var(--light-gray);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+    background-color: #e0e7ed; /* Slightly darker light gray on hover */
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.value-card i {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.value-card h3 {
+    font-family: var(--heading-font);
+    color: var(--dark-blue);
+    margin-bottom: 10px;
+}
+
+.value-card p {
+    font-size: 0.95rem;
+}
+
+
+/* --- Team Section --- */
+.team-section {
+    padding: 80px 0;
+    background-color: var(--light-gray); /* Match with how-it-works for visual flow */
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    max-width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover img {
+    transform: scale(1.05) rotate(3deg);
+    border-color: var(--secondary-color);
+}
+
+.team-member h3 {
+    margin-bottom: 5px;
+    font-family: var(--heading-font);
+    color: var(--dark-blue);
+}
+
+.team-member p {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.social-links a {
+    color: var(--text-color);
+    margin: 0 10px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+
+/* --- CTA Section --- */
+.cta-section {
+    background: linear-gradient(135deg, var(--dark-blue), var(--primary-color));
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-family: var(--heading-font);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.cta-content p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+}
+
+.cta-button {
+    background-color: var(--secondary-color);
+    color: var(--dark-blue);
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: var(--heading-font);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.cta-button:hover {
+    background-color: #ffc107;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    .works-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .works-image {
+        min-width: unset; /* Allow it to shrink */
+        width: 100%;
+        order: -1; /* Place image above text on smaller screens */
+    }
+    .works-steps {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title { font-size: 2.2rem; }
+    .hero-content h1 { font-size: 2.5rem; }
+    .hero-content .subtitle { font-size: 1rem; }
+
+    .team-grid, .values-grid {
+        grid-template-columns: 1fr; /* Stack on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 { font-size: 2rem; }
+    .section-title { font-size: 2rem; }
+    .cta-content h2 { font-size: 2rem; }
+}

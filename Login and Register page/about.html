@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About MyCityFix - Our Mission & Vision</title>
+    <link rel="stylesheet" href="about.css">
+    </head>
+<body>
+
+    <main class="about-main">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="fade-in">Building a Better Pune, Together.</h1>
+                <p class="subtitle fade-in">MyCityFix isn't just an app; it's a movement. We are a team of passionate citizens leveraging technology to empower our community and build a more responsive, beautiful city.</p>
+            </div>
+        </section>
+
+        <section class="how-mycityfix-works-section">
+            <div class="container">
+                <h2 class="section-title fade-in">How MyCityFix Works</h2>
+                <div class="works-content">
+                    <div class="works-steps fade-in">
+                        <div class="step-item">
+                            <div class="step-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h3>1. Pin Issues on a Map</h3>
+                                <p>Easily mark the exact location of civic problems directly on an interactive map. Our geo-tagging ensures precise reporting.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-icon"><i class="fas fa-camera"></i></div>
+                            <div>
+                                <h3>2. Upload Visual Proof</h3>
+                                <p>Attach photos or short videos to your reports. Visual evidence makes issues clearer and helps authorities understand the scope.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-icon"><i class="fas fa-chart-line"></i></div>
+                            <div>
+                                <h3>3. Track Progress & Resolution</h3>
+                                <p>Monitor the status of reported issues in real-time, from "Pending" to "In Progress" and ultimately "Resolved" by local officials.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="works-image fade-in">
+                        <img src="https://placehold.co/600x600/DDEEFF/333333?text=Interactive+Map+with+Issues" alt="Interactive map showing reported civic issues.">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="values-section">
+            <div class="container">
+                <h2 class="section-title fade-in">Our Core Values</h2>
+                <div class="values-grid">
+                    <div class="value-card fade-in">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Transparency</h3>
+                        <p>Open communication and clear status updates for every reported issue.</p>
+                    </div>
+                    <div class="value-card fade-in">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Innovation</h3>
+                        <p>Leveraging cutting-edge tech to simplify civic engagement and problem-solving.</p>
+                    </div>
+                    <div class="value-card fade-in">
+                        <i class="fas fa-users-gear"></i>
+                        <h3>Community</h3>
+                        <p>Building a platform where every citizen's voice contributes to collective action.</p>
+                    </div>
+                    <div class="value-card fade-in">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Responsibility</h3>
+                        <p>Empowering individuals to take ownership of their city's well-being.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="team-section">
+            <div class="container">
+                <h2 class="section-title fade-in">Meet the Core Team</h2>
+                <div class="team-grid">
+                    <div class="team-member fade-in">
+                        <img src="YOUR_Nidhi_IMAGE_URL_HERE" alt="Team Member Nidhi">
+                        <h3>Nidhi Jain</h3>
+                        <p>Founder & UI/UX Developer</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-member fade-in">
+                        <img src="YOUR_PRACHI_IMAGE_URL_HERE" alt="Team Member Prachi">
+                        <h3>Prachi Jagota</h3>
+                        <p>UX/UI & Community Outreach</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-member fade-in">
+                        <img src="YOUR_POSHAK_IMAGE_URL_HERE" alt="Team Member Poshak">
+                        <h3>Poshak Thakur</h3>
+                        <p>Backend & GIS Specialist</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-member fade-in">
+                        <img src="YOUR_RAJEEV_IMAGE_URL_HERE" alt="Team Member Rajeev">
+                        <h3>Rajeev Kumar Gupta</h3>
+                        <p>Frontend & Backend Specialist </p>
+                        <div class="social-links">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container cta-content fade-in">
+                <h2>Ready to Make a Difference?</h2>
+                <p>Join hundreds of other citizens in Pune who are actively improving our neighborhoods. Report an issue today or browse the map to see what's happening near you.</p>
+                <a href="RegisterIssue.html" class="cta-button">Report an Issue Now</a>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+</html>
