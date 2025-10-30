@@ -1,0 +1,106 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: sans-serif;
+    background-color: white;
+    /* color: white; */
+}
+
+.registerSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.left {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 70px;
+    box-shadow: 2px 2px 2px 2px rgb(218, 190, 190);
+}
+
+.right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.right form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    border-radius: 70px;
+    box-shadow: 2px 2px 2px 2px rgb(224, 210, 210);
+    width: 80%;
+    max-width: 500px;
+    background-color: rgb(169, 168, 168);
+}
+
+.right form .password {
+    height: 35px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    text-align: center;
+    border: none;
+    font-size: 16px;
+}
+.right form .email {
+    height: 35px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    text-align: center;
+    border: none;
+    font-size: 16px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: black;
+}
+
+h5 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: black;
+}
+
+.right form a {
+    color: rgb(178, 157, 246);
+    text-decoration: none;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    align-self: flex-end;
+}
+
+.right form button {
+    height: 45px;
+    width: 120px;
+    margin-top: 15px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.right form button:hover {
+    box-shadow: 0 0 3px 5px #d1d2d3;
+}
