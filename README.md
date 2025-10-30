@@ -36,32 +36,32 @@ Built using **HTML, CSS, and JavaScript**, this project focuses on creating a si
 ---
 
 ## 📂 Project Structure
-frontend/
+frontend/ <br>
+│<br>
+├── About.html <br>
+├── About.css <br>
 │
-├── About.html
-├── About.css
-│
-├── home.html
-│
-├── website.html
-├── website.css
-├── website.js
-│
-├── RegisterIssue.html
-├── registerIssue.css
-├── registerIssue.js
-│
-├── login_register/
-│ ├── login.html
-│ ├── login.css
-│ ├── login.js
-│ ├── registration.html
-│ ├── registration.css
-│ └── registration.js
-│
-└── images/
-├── profile.jpg
-└── profile_2.jpg
+├── home.html <br>
+│<br>
+├── website.html <br>
+├── website.css <br>
+├── website.js <br>
+│ <br>
+├── RegisterIssue.html <br>
+├── registerIssue.css <br>
+├── registerIssue.js <br>
+│ <br>
+├── login_register/ <br>
+│ ├── login.html <br>
+│ ├── login.css <br>
+│ ├── login.js <br>
+│ ├── registration.html <br>
+│ ├── registration.css <br>
+│ └── registration.js <br>
+│ <br>
+└── images/ <br>
+├── profile.jpg <br>
+└── profile_2.jpg <br>
 
 
 ---
