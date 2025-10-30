@@ -1,0 +1,240 @@
+/* --- Register Issue Page Specific Styles --- */
+
+/* Note: Global variables from website.css are implicitly available here due to cascade */
+/* If you want to use them explicitly, ensure website.css is linked BEFORE RegisterIssue.css */
+
+body {
+    /* Ensures the body acts as a flex container for header, main, footer */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--background-light); /* Use global background color */
+}
+
+.redesign-register-main {
+    flex: 1; /* Allows this main content to grow and push footer down */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to the top, giving some space below header */
+    padding: 110px 20px 40px 20px; /* Adjust top padding for fixed header, add bottom padding */
+    background-color: var(--background-light); /* Match body background */
+}
+
+.register-form-container {
+    background-color: var(--card-background);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* More pronounced shadow */
+    padding: 40px 50px; /* More padding */
+    max-width: 650px; /* Slightly wider form */
+    width: 100%;
+    box-sizing: border-box;
+    animation: slideInUp 0.6s ease-out; /* Entrance animation */
+}
+
+@keyframes slideInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.register-form-header {
+    text-align: center;
+    margin-bottom: 35px;
+    color: var(--dark-text);
+}
+
+.register-form-header .form-icon {
+    font-size: 3.5rem; /* Larger icon */
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    text-shadow: 0 2px 5px rgba(0, 86, 179, 0.2);
+}
+
+.register-form-header h2 {
+    font-family: var(--heading-font);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    line-height: 1.2;
+}
+
+.register-form-header p {
+    font-size: 1.15rem;
+    color: var(--medium-text);
+    margin: 0;
+    max-width: 450px; /* Constrain text width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.redesign-issue-form .form-group {
+    margin-bottom: 28px; /* Slightly more space between form groups */
+}
+
+.redesign-issue-form label {
+    display: block;
+    font-family: var(--heading-font);
+    font-size: 1.05rem; /* Slightly larger label */
+    color: var(--dark-text);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.redesign-issue-form input[type="text"],
+.redesign-issue-form select,
+.redesign-issue-form textarea {
+    width: 100%;
+    padding: 14px 18px; /* More generous padding */
+    border: 1px solid var(--border-color);
+    border-radius: 10px; /* More rounded corners */
+    font-family: var(--body-font);
+    font-size: 1.05rem; /* Slightly larger text in fields */
+    color: var(--dark-text);
+    background-color: #fcfcfc; /* Off-white background for fields */
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.redesign-issue-form input[type="text"]::placeholder,
+.redesign-issue-form textarea::placeholder {
+    color: var(--light-text);
+    font-style: italic;
+}
+
+.redesign-issue-form input[type="text"]:focus,
+.redesign-issue-form select:focus,
+.redesign-issue-form textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(0, 86, 179, 0.18); /* More prominent focus ring */
+    outline: none;
+    background-color: var(--card-background); /* White on focus */
+}
+
+.redesign-issue-form textarea {
+    min-height: 120px; /* Taller textarea */
+}
+
+.redesign-issue-form .form-hint {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--light-text);
+    margin-top: 5px;
+    padding-left: 5px;
+}
+
+.redesign-form-actions {
+    display: flex;
+    justify-content: center; /* Center buttons */
+    gap: 20px; /* More space between buttons */
+    margin-top: 40px;
+}
+
+.redesign-submit-btn, .redesign-reset-btn {
+    padding: 14px 30px; /* Larger buttons */
+    border: none;
+    border-radius: 50px;
+    font-family: var(--heading-font);
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 150px; /* Minimum width for consistency */
+}
+
+.redesign-submit-btn {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 86, 179, 0.25);
+}
+
+.redesign-submit-btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 86, 179, 0.35);
+}
+
+.redesign-reset-btn {
+    background-color: var(--border-color); /* Light grey for reset */
+    color: var(--dark-text);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.redesign-reset-btn:hover {
+    background-color: #d0d0d0; /* Slightly darker grey */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+}
+
+/* --- Responsive Adjustments for Redesigned Register Issue Page --- */
+@media (max-width: 768px) {
+    .redesign-register-main {
+        padding: 100px 15px 30px 15px;
+        align-items: flex-start; /* Ensure form starts higher on smaller screens */
+    }
+
+    .register-form-container {
+        padding: 30px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1); /* Slightly less intense shadow */
+    }
+
+    .register-form-header .form-icon {
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+
+    .register-form-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .register-form-header p {
+        font-size: 1rem;
+    }
+
+    .redesign-issue-form input[type="text"],
+    .redesign-issue-form select,
+    .redesign-issue-form textarea {
+        padding: 12px 15px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .register-form-container {
+        padding: 25px;
+        border-radius: 10px;
+    }
+
+    .register-form-header .form-icon {
+        font-size: 2.5rem;
+    }
+
+    .register-form-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .register-form-header p {
+        font-size: 0.9rem;
+    }
+
+    .redesign-issue-form label {
+        font-size: 0.95rem;
+    }
+
+    .redesign-issue-form input[type="text"],
+    .redesign-issue-form select,
+    .redesign-issue-form textarea {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+
+    .redesign-form-actions {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 12px;
+    }
+
+    .redesign-submit-btn, .redesign-reset-btn {
+        width: 100%; /* Full width for stacked buttons */
+        padding: 12px 20px;
+        font-size: 0.95rem;
+        min-width: unset; /* Remove min-width for full flexibility */
+    }
+}

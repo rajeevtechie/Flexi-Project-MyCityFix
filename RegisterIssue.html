@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyCityFix - Register an Issue</title>
+    <link rel="stylesheet" href="website.css">
+    <link rel="stylesheet" href="RegisterIssue.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav-container">
+            <a href="website.html" class="nav-logo">
+                <h1 class="logo-text">MyCityFix</h1>
+            </a>
+            <div class="search-area">
+                <input type="text" placeholder="Search issues, locations..." class="search-input">
+                <button class="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <ul class="nav-links">
+                <li><a href="website.html" class="nav-item">Home</a></li>
+                <li><a href="About.html" class="nav-item">About Us</a></li>
+                <li><a href="#" class="nav-item">Contact</a></li>
+                <li><a href="login_register/login.html" class="nav-item profile-link" aria-label="User Profile">
+                    <i class="fa-solid fa-circle-user profile-icon"></i>
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="redesign-register-main">
+        <div class="register-form-container">
+            <div class="register-form-header">
+                <i class="fas fa-clipboard-question form-icon"></i>
+                <h2>Register Your City Issue</h2>
+                <p>Help us improve your community by reporting problems swiftly and accurately.</p>
+            </div>
+
+            <form action="#" method="post" class="redesign-issue-form">
+                <div class="form-group">
+                    <label for="issueTitle">Issue Title</label>
+                    <input type="text" id="issueTitle" name="issueTitle" placeholder="e.g. Pothole on MG Road" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category" name="category" required>
+                        <option value="">-- Select Category --</option>
+                        <option value="pothole">Pothole</option>
+                        <option value="streetlight">Streetlight Outage</option>
+                        <option value="garbage">Garbage / Waste Management</option>
+                        <option value="water">Water Leakage / Supply</option>
+                        <option value="encroachment">Encroachment</option>
+                        <option value="road_damage">Road Damage (other than potholes)</option>
+                        <option value="drainage">Drainage / Sewer Issue</option>
+                        <option value="public_amenity">Damaged Public Amenity</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" placeholder="Describe the issue in detail, including its severity and impact. (Min 20 characters)" rows="5" minlength="20" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Location / Landmark</label>
+                    <input type="text" id="address" name="address" placeholder="Enter precise address or nearby landmark" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="uploadFile">Supporting Media (Image/Video)</label>
+                    <input type="file" id="uploadFile" name="uploadFile" accept="image/*,video/*">
+                    <small class="form-hint">Optional: Uploading an image or video helps us understand the issue better.</small>
+                </div>
+
+                <div class="redesign-form-actions">
+                    <button type="submit" class="redesign-submit-btn">Submit Issue</button>
+                    <button type="reset" class="redesign-reset-btn">Reset Form</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 MyCityFix. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
